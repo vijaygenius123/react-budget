@@ -34,6 +34,8 @@ const BudgetContext = createContext<IBudgetContext>({
     expenses: [],
 })
 
+export const UNCATEGORIZED_BUDGET_ID = "Uncategorized"
+
 export const useBudgets = () => {
     return useContext(BudgetContext)
 }
