@@ -4,6 +4,7 @@ import BudgetCard from "./components/BudgetCard";
 import AddBudgetModal from "./components/AddBudgetModal";
 import {UNCATEGORIZED_BUDGET_ID, useBudgets} from "./contexts/BudgetContext";
 import AddExpenseModal from "./components/AddExpenseModal";
+import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
                                                               max={budget.max}
                                                               onAddExpenseClick={() => openAddExpenseModal(budget.id)}
                 />)}
+                <UncategorizedBudgetCard   onAddExpenseClick={() => openAddExpenseModal(UNCATEGORIZED_BUDGET_ID)}/>
 
             </div>
             <AddBudgetModal show={showAddBudgetModal} handleClose={() => {

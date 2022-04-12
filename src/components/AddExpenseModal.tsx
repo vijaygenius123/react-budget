@@ -24,7 +24,7 @@ const AddExpenseModal: React.FunctionComponent<AddBudgetModal> = ({
         if (addExpense && descriptionRef.current?.value && amountRef.current?.value) {
             addExpense({
                 description: descriptionRef.current?.value,
-                amount: parseFloat(descriptionRef.current?.value),
+                amount: parseFloat(amountRef.current?.value),
                 budgetId: budgetIdRef.current?.value || UNCATEGORIZED_BUDGET_ID
             })
         }
